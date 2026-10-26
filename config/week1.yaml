@@ -1,0 +1,31 @@
+# 首周开工：32×32 仓储网格，5 处交叉路口，10 个智能体。
+# 非巷道栅格一律视为货架。理想通信下 CBS 只需在每处交叉让其中一车等待一步。
+seed: 1
+seed_search: 40
+loss_rate: 0.45
+max_steps: 48
+stall_limit: 12
+
+map:
+  width: 32
+  height: 32
+  horizontal_aisles:
+    - {y: 16, x0: 1, x1: 30}
+  vertical_aisles:
+    - {x: 3, y0: 14, y1: 18}
+    - {x: 9, y0: 14, y1: 18}
+    - {x: 15, y0: 14, y1: 18}
+    - {x: 21, y0: 14, y1: 18}
+    - {x: 27, y0: 14, y1: 18}
+
+agents:
+  - {id: 0, start: [1, 16], goal: [5, 16]}
+  - {id: 1, start: [3, 14], goal: [3, 18]}
+  - {id: 2, start: [7, 16], goal: [11, 16]}
+  - {id: 3, start: [9, 14], goal: [9, 18]}
+  - {id: 4, start: [13, 16], goal: [17, 16]}
+  - {id: 5, start: [15, 14], goal: [15, 18]}
+  - {id: 6, start: [19, 16], goal: [23, 16]}
+  - {id: 7, start: [21, 14], goal: [21, 18]}
+  - {id: 8, start: [25, 16], goal: [29, 16]}
+  - {id: 9, start: [27, 14], goal: [27, 18]}
